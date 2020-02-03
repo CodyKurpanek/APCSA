@@ -7,7 +7,7 @@ package unit0;
 //Class -
 //Lab  -
 
-public class AsciiBox
+public class AsciiBox extends Input
 {
 	public static void main(String[] args)
 	{
@@ -40,5 +40,7 @@ public class AsciiBox
 		{
 			System.out.println("+++++++++++++++++++++++++ " );
 		}
+		Input hi = new Input();
+		hi.main(args);
 	}
 }
