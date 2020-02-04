@@ -29,7 +29,7 @@ public class Variables
 		
 
 		//other integer types
-		float floatOne = 127;
+		float floatOne = 127.0f;
 
 
 		//other types
