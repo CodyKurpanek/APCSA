@@ -9,8 +9,6 @@ public class TrapRunner
 {
 	public static void main( String[] args )
 	{
-		System.out.println(Trap.removeA("Heallao"));
-		System.out.println(Trap.reverse("Heallao"));
 		System.out.println( Trap.area( 3, 3, 3) );
 		System.out.println( Trap.area( 5, 6, 7) );
 		System.out.println( Trap.area( 7, 10, 6) );
