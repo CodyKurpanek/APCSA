@@ -17,4 +17,12 @@ public class LineRunner
 		System.out.printf( "Slope is :: %.2f\n" , Line.getSlope( 1,7,2,9 ) );
 		
 	}
+   /*Code ran as in test cases:
+Slope is :: -0.54
+Slope is :: -0.24
+Slope is :: 0.50
+Slope is :: -1.00
+Slope is :: 8.00
+Slope is :: 2.00
+    */
 }
