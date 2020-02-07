@@ -32,7 +32,24 @@ public class MPHRunner
 			test.print();
 		}
 
-		
+	/*====================Output copied from Console======================
+Enter the distance :: 45
+Enter the hours :: 0
+Enter the minutes :: 32
+45 miles in 0 hour and 32 minutes = 84 MPH.
+Enter the distance :: 96
+Enter the hours :: 1
+Enter the minutes :: 43
+96 miles in 1 hour and 43 minutes = 56 MPH.
+Enter the distance :: 100
+Enter the hours :: 2
+Enter the minutes :: 25
+100 miles in 2 hour and 25 minutes = 41 MPH.
+Enter the distance :: 50
+Enter the hours :: 2
+Enter the minutes :: 25
+50 miles in 2 hour and 25 minutes = 21 MPH.
+	 */
 		
 	}
 }

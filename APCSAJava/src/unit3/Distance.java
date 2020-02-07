@@ -44,7 +44,7 @@ public class Distance
 	
 	public void calcDistance()
 	{
-		distance = Math.sqrt(Math.pow(xTwo - xOne, 2) + Math.pow(yTwo - yOne, 2));
+		distance = Math.sqrt(Math.pow((double)xTwo - xOne, 2) + Math.pow((double)yTwo - yOne, 2));
 	}
 	
 	public double getDistance()
@@ -54,7 +54,7 @@ public class Distance
 	
 	public void print()
 	{
-		System.out.println("distance == " + distance);
+		System.out.printf("distance == %.3f\n", distance);
 	}
 	
 	//complete print or the toString
