@@ -16,10 +16,12 @@ public class WordsCompare
 
 	public WordsCompare()
 	{
+		
 	}
 
 	public WordsCompare(String one, String two)
 	{
+
 	}
 
 	public void setWords(String one, String two)

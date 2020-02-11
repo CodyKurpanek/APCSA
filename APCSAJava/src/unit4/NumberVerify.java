@@ -13,10 +13,15 @@ public class NumberVerify
 {
 	public static boolean isOdd( int num )
 	{
-		return true;
+		if (num > 0) {
+			return (num % 2 == 1);
+		}
+		else {
+			return (num % 2 == -1);
+		}
 	}
 	public static boolean isEven( int num )
 	{
-		return true;
+		return (num % 2 == 0);
 	}	
 }

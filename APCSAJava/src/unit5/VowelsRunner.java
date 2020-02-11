@@ -15,13 +15,30 @@ public class VowelsRunner
 		System.out.println(  s.go(  "##catgiraffeapluscompsci")    );
 		System.out.println(  s.go(  "apluscatsanddogsaplus###")    );
 		System.out.println(  s.go(  "##")    );
-		System.out.println(  s.go(  "aplusdog#13337#pigaplusprogram")    );
+		System.out.println(  s.go(  "Aplusdog#13337#pigaplusprogram")    );
 		System.out.println(  s.go(  "code#H00P#code1234")    );
 		System.out.println(  s.go(  "##wowgira77##eplus")    );
 		System.out.println(  s.go(  "catsandaplusdogsaplus###")    );
 		System.out.println(  s.go(  "7")    );
-
+		System.out.println(  s.go(  "A")    );
+		System.out.println(  s.go(  "E")    );
+		System.out.println(  s.go(  "9AEIOUaeiou@")    );
 	}
+	/*
+no
+no
+no
+yes
+no
+yes
+no
+no
+no
+no
+yes
+yes
+no
+	 */
 }
 
 

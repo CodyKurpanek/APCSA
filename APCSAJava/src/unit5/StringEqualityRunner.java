@@ -13,7 +13,26 @@ public class StringEqualityRunner
 {
 	public static void main( String args[] )
 	{
-		//add test cases
-		
+		StringEquality a = new StringEquality("hello", "goodbye");
+		a.checkEquality();
+		System.out.println(a);
+		a.setWords("one", "two");
+		a.checkEquality();
+		System.out.println(a);
+		a.setWords("three", "four");
+		a.checkEquality();
+		System.out.println(a);
+		a.setWords("TCEA", "UIL");
+		a.checkEquality();
+		System.out.println(a);
+		a.setWords("State", "Champions");
+		a.checkEquality();
+		System.out.println(a);
+		a.setWords("ABC", "ABC");
+		a.checkEquality();
+		System.out.println(a);
+		a.setWords("one", "two");
+		a.checkEquality();
+		System.out.println(a);
 	}
 }

@@ -7,8 +7,14 @@ package unit5;
 
 public class FirstLastVowel
 {
-   public static String go( String a )
-	{
-		return "add code here";
-	}
+   public String go( String a ){
+	   String[] vowels = {"a", "e", "i", "o","u"};
+	   String isVowel = "no";
+	   for (String vow : vowels) {
+		   if (vow.equalsIgnoreCase(a.substring(0, 1)) || vow.equalsIgnoreCase(a.substring(a.length() - 1)) ) {
+			   isVowel = "yes";
+		   }
+	   }
+	   return isVowel;
+   }
 }
