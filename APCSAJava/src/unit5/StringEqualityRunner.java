@@ -35,4 +35,21 @@ public class StringEqualityRunner
 		a.checkEquality();
 		System.out.println(a);
 	}
+	/*
+	 * ==================From Console=================
+hello does not have the same letters as goodbye
+
+one does not have the same letters as two
+
+three does not have the same letters as four
+
+TCEA does not have the same letters as UIL
+
+State does not have the same letters as Champions
+
+ABC has the same letters as ABC
+
+one does not have the same letters as two
+
+	 */
 }

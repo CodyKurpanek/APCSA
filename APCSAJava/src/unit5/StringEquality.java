@@ -36,6 +36,12 @@ public class StringEquality
 	{
 		wordOne = one;
 		wordTwo = two;
+		if (one.equals(two)){
+			compare = true;
+		}
+		else {
+			compare = false;
+		}
 	}
 
 	public boolean checkEquality( )
