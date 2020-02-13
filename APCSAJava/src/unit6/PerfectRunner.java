@@ -9,7 +9,12 @@ public class PerfectRunner
 {
 	public static void main( String args[] )
 	{
-		//add test cases
-																
+		Perfect tester = new Perfect(6);
+		if (tester.isPerfect()) {
+			System.out.println("Perfect");
+		}
+		else {
+			System.out.println("not Perfect");
+		}
 	}
 }
