@@ -16,10 +16,20 @@ public class TriangleOne
 
 	public TriangleOne(String s)
 	{
+		word = s;
+		System.out.println(s);
+		for (int i = s.length() - 1; i > 0; i --) {
+			System.out.println(s.substring(0, i));
+		}
 	}
 
 	public void setWord(String s)
 	{
+		word = s;
+		System.out.println(s);
+		for (int i = s.length() - 1; i > 0; i --) {
+			System.out.println(s.substring(0, i));
+		}
 	}
 
 	public void print( )
