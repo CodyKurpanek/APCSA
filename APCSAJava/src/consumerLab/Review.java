@@ -20,7 +20,7 @@ public class Review {
   
   static{
     try {
-      Scanner input = new Scanner(new File("cleanSentiment.csv"));
+      Scanner input = new Scanner(new File("src/ConsumerLab/cleanSentiment.csv"));
       while(input.hasNextLine()){
         String[] temp = input.nextLine().split(",");
         sentiment.put(temp[0],Double.parseDouble(temp[1]));
@@ -35,7 +35,7 @@ public class Review {
   
   //read in the positive adjectives in postiveAdjectives.txt
      try {
-      Scanner input = new Scanner(new File("positiveAdjectives.txt"));
+      Scanner input = new Scanner(new File("src/ConsumerLab/positiveAdjectives.txt"));
       while(input.hasNextLine()){
         String temp = input.nextLine().trim();
         System.out.println(temp);
@@ -49,7 +49,7 @@ public class Review {
  
   //read in the negative adjectives in negativeAdjectives.txt
      try {
-      Scanner input = new Scanner(new File("negativeAdjectives.txt"));
+      Scanner input = new Scanner(new File("src/ConsumerLab/negativeAdjectives.txt"));
       while(input.hasNextLine()){
         negAdjectives.add(input.nextLine().trim());
       }
@@ -153,17 +153,31 @@ public class Review {
   public static double totalSentiment(String filename)
   {
     // read in the file contents into a string using the textToString method with the filename
-
+	String contents = Review.textToString(filename);
+	contents = contents + " ";
     // set up a sentimentTotal variable
-
+	double sentimentTotal = 0.0;
     // loop through the file contents 
-
+	while (true){
+		for (int i = 0; i < contents.length(); i++) {
+			String firstWord = "";
+		}
+		if (contents.charAt(i) == ' ') {
+			firstWord = contents.substring(0, i);
+			System.out.println(contents);
+			sentimentTotal += Review.sentimentVal(firstWord);
+			try {
+				contents = contents.substring(i + 1);
+			} catch(Exception e) {
+				System.out.println("There are no words left!!");
+				return sentimentTotal;
+			}
+		}
+		
+	}
        // find each word
        // add in its sentimentVal
        // set the file contents to start after this word
-   
-   
-
 
 
    return sentimentTotal; 
@@ -186,4 +200,5 @@ public class Review {
     // return number of stars
     return stars; 
   }
+
 }
