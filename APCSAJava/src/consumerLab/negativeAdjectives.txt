@@ -1,1 +1,9 @@
+<<<<<<< HEAD
 ok ok ok
+=======
+bad
+terrible 
+horrible
+awful
+disappointed
+>>>>>>> branch 'master' of https://github.com/CodyKurpanek/APCSA.git

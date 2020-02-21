@@ -1,1 +1,9 @@
+<<<<<<< HEAD
 ok
+=======
+great
+happy
+awesome
+perfect
+wonderful
+>>>>>>> branch 'master' of https://github.com/CodyKurpanek/APCSA.git
