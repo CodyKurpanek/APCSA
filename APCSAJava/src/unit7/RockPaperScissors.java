@@ -17,7 +17,7 @@ public class RockPaperScissors {
 	public RockPaperScissors(String player)
 	{
 		playChoice = player;
-		compChoice = 
+		compChoice = this.chose();
 	}
 
 	public String chose()
@@ -29,14 +29,39 @@ public class RockPaperScissors {
 		if (a == 2) {
 			return "P";
 		}
-		if ()
+		if (a == 3) {
+			return "S";
+		}
+		return "Failed";
 	}
 
 	public void setPlayers(String player) {
+		playChoice = player;
+		compChoice = this.chose();
 	}
 
 	public String determineWinner() {
-		String winner = "";
+		String winner = "Computer";
+		if (!(playChoice.contentEquals("R") || playChoice.contentEquals("P") || playChoice.contentEquals("S")))
+		{
+			return "invalid input";
+		}
+		if (playChoice.equals("R"))
+		{
+			if (compChoice.equals("S")) {
+				winner = "Player";
+			}
+		}
+		if (playChoice.equals("P")) {
+			if (compChoice.equals("R")) {
+				winner = "Player";
+			}
+		}
+		if (playChoice.equals("S")) {
+			if (compChoice.equals("R")) {
+				winner = "Player";
+			}
+		}
 		return winner;
 	}
 
