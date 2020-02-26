@@ -10,7 +10,7 @@ public class RayOddToEven
 	{
 		int odd = -1;
 		int nextEven = -1;
-		for(int i = 1; i < ray.length; i ++) {
+		for(int i = 0; i < ray.length; i ++) {
 			if (ray[i] % 2 == 1) {
 				odd = i;
 				break;

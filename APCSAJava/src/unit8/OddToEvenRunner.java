@@ -27,4 +27,15 @@ public class OddToEvenRunner
 		int[] i = {2, 4, 6, 8, 8};
 		System.out.println(RayOddToEven.go(i));
 	}
+	/*====================From Console===============
+	 * 6
+2
+3
+1
+-1
+4
+5
+4
+-1
+	 */
 }
