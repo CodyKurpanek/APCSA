@@ -1,3 +1,4 @@
+package unit9;
 //(c) A+ Computer Science
 //www.apluscompsci.com
 //Name -
@@ -10,6 +11,8 @@ public class ListOddToEven
 {
 	public static boolean go( List<Integer> ray )
 	{
-		return false;
+		for (int i = 0; i < ray.size(); i ++) {
+			if ()
+		}
 	}
 }
