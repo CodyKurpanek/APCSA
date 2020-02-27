@@ -4,6 +4,7 @@ package unit9;
 //Name -
 //Date -
 
+<<<<<<< HEAD
 import unit8.RayDown;
 import java.util.Arrays;
 
@@ -50,4 +51,11 @@ false
 true
 false
 	 */
+=======
+public class DownRunner
+{
+	public static void main( String args[] )
+	{											
+	}
+>>>>>>> branch 'master' of https://github.com/CodyKurpanek/APCSA.git
 }
