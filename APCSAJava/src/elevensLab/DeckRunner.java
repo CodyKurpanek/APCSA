@@ -23,6 +23,6 @@ public class DeckRunner
 		for( int j = 1; j <= 52; j++ )
 		{
 			System.out.println( test.dealCard() );
-		}				
+		}
 	}
 }
