@@ -13,6 +13,7 @@ public class Deck{
 	public static final int NUMCARDS = 52;
 	public static String[] SUITS = "CLUBS HEARTS DIAMONDS SPADES".split(" ");
 	
+	
 	private List<Card> cards;
 	private int top;
 	//Deck Constructors
@@ -31,7 +32,17 @@ public class Deck{
    			//add a new TwentyOneCard to the deck
 
 	}
-	
+	public Deck(String[] ranks, String[] suits, int[] values){
+		cards = new ArrayList<Card>();
+		for (String rank: ranks) {
+			for (String suit: suits) {
+				for (int value: values) {
+					cards.add(new Card(rank, suit, value));
+				}
+			}
+		}
+		top = cards.size() - 1;
+	}
 	
 	
    //make a dealCard() method that returns the top card
@@ -39,6 +50,13 @@ public class Deck{
 	   top -= 1;
 	   return cards.get(top + 1);
    }
+   
+   
+   public Card deal() {
+	   top -= 1;
+	   return cards.get(top + 1);
+   }
+   
    //write a shuffle() method
    public void shuffle() {
 	   //use Colletions.shuffle
@@ -47,7 +65,15 @@ public class Deck{
 	   top = 51;
    }
    
-
-
-	
+   public boolean isEmpty() {
+	   if (cards.size() == 0) {
+		   return true;
+	   }
+	   return false;
+   }
+   
+   public int size(){
+	   return (top + 1);
+   }
+ 
 }
