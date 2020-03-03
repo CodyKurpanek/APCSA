@@ -12,7 +12,8 @@ class Rational implements Comparable<Rational>
 	private int den;
 	//write two constructors
 	public Rational() {
-		
+		num = 1;
+		den = 1;
 	}
 	
 	public Rational(int numOne, int numTwo) {
@@ -20,17 +21,17 @@ class Rational implements Comparable<Rational>
 		den = numTwo;
 	}
 	//write a setRational method
-	public void setRational() {
+	public void setRational(int a, int b) {
 		int divideBy = -1; 
-		int max = Math.max(num, den);
-		for(int i = 0; i < max; i ++) {
-			if ((num % i) % 1 == 0 && (num % i) % 1 == 0) {
+		int max = Math.max(a, b);
+		for(int i = 1; i < max; i ++) {
+			if (((double)a % i) == 0 && ((double)b % i) == 0) {
 				divideBy = 1;
 			}
 		}
 		if (divideBy != -1) {
-			num = num / divideBy;
-			den = den / divideBy;
+			num = a / divideBy;
+			den = b / divideBy;
 		}
 	}
 
@@ -47,20 +48,27 @@ class Rational implements Comparable<Rational>
 	public void add(Rational  other)
 	{
 		//num1/den1 + num2/den2 
+		num = num * other.getDenominator() + other.getNumerator() * den;
 		//new numerator = (num1 * den2 + num2 * den1)
 		//new denominator = (den1 * den2)
-		
-		
-
+		den = den * other.getDenominator();
 
 		reduce();
 	}
 
 	private void reduce()
 	{
-
-
-
+		int divideBy = -1; 
+		int max = 100;
+		for(int i = 1; i < max; i ++) {
+			if (((double)num % i) == 0 && ((double)den % i) == 0) {
+				divideBy = i;
+			}
+		}
+		if (divideBy != -1) {
+			num = num / divideBy;
+			den = den / divideBy;
+		}
 	}
 
 	private int gcd(int numOne, int numTwo)
@@ -95,14 +103,18 @@ class Rational implements Comparable<Rational>
 	
 	public boolean equals( Object obj)
 	{
-
+		if((double)num / den == (double)((Rational) obj).getNumerator()/((Rational)obj).getDenominator()) {
+			return true;
+		}
 
 		return false;
 	}
 
 	public int compareTo(Rational other)
 	{
-
+		if((double)num / den > (double)other.getNumerator()/other.getDenominator()){
+			return 1;
+		}
 
 		return -1;
 	}
@@ -111,6 +123,9 @@ class Rational implements Comparable<Rational>
 
 	
 	//write  toString() method
+	public String toString() {
+		return num + "/" + den;
+	}
 	
 	
 }

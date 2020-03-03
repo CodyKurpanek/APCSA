@@ -12,6 +12,6 @@ public class TriangleWord
 		
 	public static void printTriangle(String word)
 	{
-		System.out.println("changes");
+		System.out.println((double)5 % 3);
 	}
 }
