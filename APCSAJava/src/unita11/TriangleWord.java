@@ -12,5 +12,6 @@ public class TriangleWord
 		
 	public static void printTriangle(String word)
 	{
+		System.out.println("changes");
 	}
 }
