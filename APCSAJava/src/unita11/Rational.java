@@ -20,11 +20,17 @@ class Rational implements Comparable<Rational>
 		den = numTwo;
 	}
 	//write a setRational method
-	public void setRational() {\
-		int divideBY = -1;
+	public void setRational() {
+		int divideBy = -1; 
 		int max = Math.max(num, den);
 		for(int i = 0; i < max; i ++) {
-			if (i / num
+			if ((num % i) % 1 == 0 && (num % i) % 1 == 0) {
+				divideBy = 1;
+			}
+		}
+		if (divideBy != -1) {
+			num = num / divideBy;
+			den = den / divideBy;
 		}
 	}
 
