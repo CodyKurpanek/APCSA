@@ -28,5 +28,8 @@ public class CardRunner
 
 		Card five = new Card("HEARTS", 12);
 		out.println(five);
+		
+		System.out.println(((double)11/5) % 1 == 0);
+		
 	}
 }

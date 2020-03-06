@@ -48,4 +48,6 @@ public class ShapePanel extends JPanel
 		//draw the Shape
 		
 	}
+		// TODO Auto-generated method stub
+		
 }

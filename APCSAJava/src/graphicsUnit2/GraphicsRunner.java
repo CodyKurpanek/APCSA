@@ -21,10 +21,11 @@ public class GraphicsRunner extends JFrame
 		super("MAKE YOUR OWN SHAPE");
 
 		setSize(WIDTH,HEIGHT);
+		
+		ShapePanel a = new ShapePanel();
+		//getContentPane().add(new ShapePanel());
 
-		getContentPane().add(new ShapePanel());
-
-		getContentPane().add(new MovingShapePanel());
+		//getContentPane().add(new MovingShapePanel());
 
 		setVisible(true);
 

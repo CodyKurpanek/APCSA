@@ -1,5 +1,5 @@
 package buggy5;
-/**
+/*
  * Card.java
  *
  * <code>Card</code> represents a playing card.
