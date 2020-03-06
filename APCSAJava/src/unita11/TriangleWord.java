@@ -12,6 +12,11 @@ public class TriangleWord
 		
 	public static void printTriangle(String word)
 	{
-		System.out.println((double)5 % 3);
+		for(int i = 1; i <= word.length(); i++) {
+			for(int j = 0; j < i; j++) {
+				System.out.print(word.substring(0,i));
+			}
+			System.out.print("\n");
+		}
 	}
 }
