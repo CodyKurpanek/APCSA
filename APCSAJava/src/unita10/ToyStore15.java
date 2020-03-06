@@ -9,31 +9,41 @@ import java.util.ArrayList;
 import java.util.Collections;
 import static java.lang.System.*;
 
-public class ToyStore
+public class ToyStore15
 {
 	private ArrayList<Toy> toyList;
 
-	public ToyStore()
+	public ToyStore15()
 	{
-		loadToys("");
+		toyList = new ArrayList<Toy>();
 	}
 
-	public ToyStore(String toys) {
+	public ToyStore15(String toys) {
 		toyList = new ArrayList<Toy>();
         for (String t: toys.split(" ")){
-            loadToys(t);
+            loadToysInitial(t);
         }
 	}
 	
-	public void loadToys( String toys )
+	public void loadToysInitial( String toys )
 	{
+		
 		Toy that = getThatToy(toys);
-        if (that == null){
-            toyList.add(new Toy(toys));
-        } else{
-            that.setCount(that.getCount()+1);
+		if (that == null){
+			toyList.add(new Toy(toys));
+		} else{
+			that.setCount(that.getCount()+1);
+		}
+
+	}
+	
+	public void loadToys( String toys ) {
+		toyList.clear();
+		for (String t: toys.split(" ")){
+            loadToysInitial(t);
         }
 	}
+	
   
   	public Toy getThatToy(String nm)
   	{
@@ -67,6 +77,11 @@ public class ToyStore
   	  
 	public String toString()
 	{ 
-		return toyList+"\n"+"max == " + getMostFrequentToy();
+		return (toyList + "");
+	}
+	
+	public String myName() {
+		System.out.println("Cody Kurpanek");
+		return ("Cody Kurpanek");
 	}
 }

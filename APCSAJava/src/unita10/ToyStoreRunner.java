@@ -12,7 +12,7 @@ public class ToyStoreRunner
 {
 	public static void main( String args[] )
 	{
-		ToyStore ts = new ToyStore("sorry bat sorry sorry sorry train train teddy teddy ball ball");
+		ToyStore15 ts = new ToyStore15("sorry bat sorry sorry sorry train train teddy teddy ball ball");
 		System.out.println(ts);
 	}
 }
