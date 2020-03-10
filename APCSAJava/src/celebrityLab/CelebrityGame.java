@@ -51,7 +51,18 @@ public class CelebrityGame
 	 */
 	public boolean processGuess(String guess)
 	{
-		return false;
+		guess = guess.trim();
+		if (gameCelebrity.getAnswer().equalsIgnoreCase(guess)) {
+			celebGameList.remove(0);
+			if (celebGameList.size() >= 0){
+				gameCelebrity = celebGameList.get(0);
+			}
+			else {
+				gameCelebrity = new Celebrity("", "");
+			}
+			return true;
+		}
+	return false;
 	}
 
 	/**
@@ -89,7 +100,8 @@ public class CelebrityGame
 	 */
 	public boolean validateCelebrity(String name)
 	{
-		if (name.length() > 4) {
+		name = name.trim();
+		if (name.length() > 3) {
 			return true;
 		}
 		return false;
@@ -104,6 +116,7 @@ public class CelebrityGame
 	 */
 	public boolean validateClue(String clue, String type)
 	{
+		clue = clue.trim();
 		if(clue.length() > 9) {
 			return true;
 		}
@@ -117,8 +130,8 @@ public class CelebrityGame
 	 */
 	public int getCelebrityGameSize()
 	{
-		return 0;
-	}
+		return celebGameList.size();
+	}  
 
 	/**
 	 * Accessor method for the games clue to maintain low coupling between
@@ -128,7 +141,7 @@ public class CelebrityGame
 	 */
 	public String sendClue()
 	{
-		return null;
+		return gameCelebrity.getClue();
 	}
 
 	/**
@@ -139,6 +152,6 @@ public class CelebrityGame
 	 */
 	public String sendAnswer()
 	{
-		return null;
+		return gameCelebrity.getAnswer();
 	}
 }
