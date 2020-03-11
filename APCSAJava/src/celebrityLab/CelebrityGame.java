@@ -90,7 +90,22 @@ public class CelebrityGame
 	 */
 	public void addCelebrity(String name, String guess, String type)
 	{
-		celebGameList.add(new Celebrity(name, guess));
+		Celebrity currentCelebrity;
+		
+		if (type.equals("Literature"))
+		{
+		currentCelebrity = new LiteratureCelebrity(name, guess);
+		}
+		else if (type.equals("esport"))
+		{
+		currentCelebrity = new ESportsCelebrity(name, "League of Legends", guess);
+		}
+		else{
+			currentCelebrity = new Celebrity(name, guess);
+		}
+		
+		this.celebGameList.add(currentCelebrity);
+		
 	}
 
 	/**
@@ -114,14 +129,28 @@ public class CelebrityGame
 	 * @param type Supports a subclass of Celebrity 
 	 * @return If the clue is valid.
 	 */
-	public boolean validateClue(String clue, String type)
-	{
-		clue = clue.trim();
-		if(clue.length() > 9) {
-			return true;
+	public boolean validateClue(String clue, String type){
+	boolean validClue = false;
+	if (clue.trim().length() >= 10){
+		validClue = true;
+		
+	if (type.equalsIgnoreCase("literature")){
+		String[] temp = clue.split(",");
+		if (temp.length > 1){
+			validClue = true;}
+		else{
+			validClue = false;
 		}
-		return false;
 	}
+	else if (type.equalsIgnoreCase("esport")) {
+		if (clue.trim().length() >= 10){
+			validClue = true;
+		}
+	}
+	}
+	return (validClue);
+	}
+
 
 	/**
 	 * Accessor method for the current size of the list of celebrities
