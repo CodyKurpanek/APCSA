@@ -122,7 +122,7 @@ public class StartPanel extends JPanel
 	public StartPanel(CelebrityGame controller)
 	{
 		super();
-		esportRadioButton = new JRadioButton("Your Celebrity Type");
+		esportRadioButton = new JRadioButton("Esport  Celebrity");
 		esportCelebrity = "Your celebrity type clue format hint";
 		
 		this.controller = controller;

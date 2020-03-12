@@ -12,6 +12,7 @@ public class LiteratureCelebrity extends Celebrity
 	 * The list of clues for the Literature Celebrity. They can be titles of texts, important characters, settings, etc...s
 	 */
 	private ArrayList<String> clueList;
+	private String type;
 
 	/**
 	 * Builds a LiteratureCelebrity instance with an answer and a series of clues as a String separated by commas.
@@ -21,6 +22,11 @@ public class LiteratureCelebrity extends Celebrity
 	public LiteratureCelebrity(String answer, String clues)
 	{
 		super(answer, clues);
+		processClues();
+	}
+	public LiteratureCelebrity(String answer, String clues, String type) {
+		super(answer, clues);
+		this.type = type;
 		processClues();
 	}
 	

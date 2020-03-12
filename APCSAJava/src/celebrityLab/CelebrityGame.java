@@ -23,7 +23,7 @@ public class CelebrityGame
 	/**
 	 * The ArrayList of Celebrity values that make up the game
 	 */
-	private ArrayList<Celebrity> celebGameList;
+	private ArrayList<Celebrity> celebGameList = new ArrayList<Celebrity>();
 	/**
 	 * Builds the game and starts the GUI
 	 */
@@ -54,11 +54,11 @@ public class CelebrityGame
 		guess = guess.trim();
 		if (gameCelebrity.getAnswer().equalsIgnoreCase(guess)) {
 			celebGameList.remove(0);
-			if (celebGameList.size() >= 0){
-				gameCelebrity = celebGameList.get(0);
+			if (celebGameList.size() == 0){
+				gameCelebrity = new Celebrity("", "");
 			}
 			else {
-				gameCelebrity = new Celebrity("", "");
+				gameCelebrity = celebGameList.get(0);
 			}
 			return true;
 		}
@@ -94,14 +94,14 @@ public class CelebrityGame
 		
 		if (type.equals("Literature"))
 		{
-		currentCelebrity = new LiteratureCelebrity(name, guess);
+		currentCelebrity = new LiteratureCelebrity(name, guess, "");
 		}
 		else if (type.equals("esport"))
 		{
 		currentCelebrity = new ESportsCelebrity(name, "League of Legends", guess);
 		}
 		else{
-			currentCelebrity = new Celebrity(name, guess);
+			currentCelebrity = new Celebrity(name, guess, "");
 		}
 		
 		this.celebGameList.add(currentCelebrity);

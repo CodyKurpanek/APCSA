@@ -14,6 +14,7 @@ public class Celebrity
 	 * The answer or name of the celebrity.
 	 */
 	private String answer;
+	private String type;
 	/**
 	 * Creates a Celebrity instance with the supplied answer and clue
 	 * @param answer
@@ -23,6 +24,11 @@ public class Celebrity
 	{
 		this.clue = clue;
 		this.answer = answer;
+	}
+	public Celebrity(String answer, String clue, String type) {
+		this.clue = clue;
+		this.answer = answer;
+		this.type = type;
 	}
 
 	/**
