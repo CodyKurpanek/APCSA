@@ -13,6 +13,6 @@ public class CelebrityRunner
 	public static void main(String [] args)
 	{
 		CelebrityGame controller = new CelebrityGame();
-		StartPanel a = new StartPanel(controller);
+		//StartPanel a = new StartPanel(controller);
 	}
 }

@@ -1,12 +1,10 @@
 package dataLab;
-import core.data.*;
+import core.data.DataSource;
 
 public class Welcome01 {
    public static void main(String[] args) {
-      String id = "KATL";
+      String id = "KCRQ";
       DataSource ds = DataSource.connect("http://weather.gov/xml/current_obs/" + id + ".xml"); 
-      
-      ds.printUsageString();
       ds.setCacheTimeout(15 * 60);  
       ds.load();
       //ds.printUsageString();
