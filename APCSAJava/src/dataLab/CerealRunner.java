@@ -23,9 +23,7 @@ public class CerealRunner {
 			if (ratio < bestRatio) {
 				best = i;
 			}
-		}
-		for(Cereal c: clist) {
-			System.out.println(c);
+			System.out.println(i);
 		}
 		System.out.println("The best cereal for low carbs and high protein is: " + best);
 	}

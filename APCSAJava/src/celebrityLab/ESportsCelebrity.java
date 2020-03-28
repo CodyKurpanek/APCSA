@@ -12,7 +12,7 @@ public class ESportsCelebrity extends Celebrity{
 	
 	public String getClue()
 	{
-		return esport;
+		return "ESport Celeberity: " + this.getClue();
 	}
 	
 	public String getClue2() {
